@@ -2,6 +2,7 @@
 
 This is a web todolist and dyweb php assignment.
 
+![snapshot](./snap.png)
 ## Usage
 
 With php, set up a localhost or a server. A easy way to set up a localhost is
@@ -11,7 +12,7 @@ php -S localhost:8080 -t ./src/
 ```
 I reccommend that open <http://localhost:8080/index.php> with Google Chrome.
 
-## Struture
+## Structure
 
 - index.php
     - It is mainly a html file to display contents.
@@ -25,4 +26,4 @@ I reccommend that open <http://localhost:8080/index.php> with Google Chrome.
 
 ## Demo
 
-It is a shame that the configuration on my hired server has some slight problems. I will add the demo soon.
+It is a shame that the configuration on my hired server has some slight problems. Instead there is a snapshot above.
