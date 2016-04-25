@@ -1,7 +1,7 @@
 <?php
-    require 'todolist.php';
-    $todolist = new todolist();
-    $list = $todolist->get_list();
+    require 'TodoList.php';
+    $TodoList = new TodoList();
+    $list = $TodoList->get_list();
 ?>
 
 <!DOCTYPE html>
@@ -20,21 +20,18 @@
         <!-- The TODO list -->
         <?php foreach ($list as $i => $item): ?>
             <p>
-                <?php if ($item['state']) { ?>
-                    <a class="selected" href="<?= 'process.php?comname='.rawurldecode($item['name'])?>">
-                        <!-- span class="com">Completed</span> -->
-                    </a>
-                <?php } else { ?>
-                    <a class="blank" href="<?= 'process.php?comname='.rawurldecode($item['name'])?>">
-                        <!-- <span class="com">Incomplete</span> -->
-                    </a>
-                <?php } ?>
+                <?php if ($item['state']): ?>
+                    <a class="selected" href="<?= 'process.php?comname='.rawurldecode($item['name'])?>"></a>
+                <?php else: ?>
+                    <a class="blank" href="<?= 'process.php?comname='.rawurldecode($item['name'])?>"></a>
+                <?php endif; ?>
                 <input class="itemname" type="text" name="<?= "itemname[{$item['name']}]" ?>" value="<?= $item['name'] ?>">
                 <a href="<?= 'process.php?delname='.rawurldecode($item['name']) ?>">
                     <span class="right">Delete</span>
                 </a>
             </p>
         <?php endforeach; ?>
+        <!-- New Item and Renew Button -->
         <p>
             <a id="no" class="selected"></a>
             <input class="itemname" type="text" name="name" placeholder="New item">

@@ -6,8 +6,10 @@
  * Date: 4/23/16
  * Time: 5:59 PM
  */
-class todolist
+class TodoList
 {
+    //$file = 'data.csv';
+
     public function __construct()
     {
         session_start();
@@ -15,9 +17,9 @@ class todolist
 
     public function initial(){
         $_SESSION['list'] = [
-            ['state' => False, 'name' => 'Eating'],
-            ['state' => False, 'name' => 'Write an essay'],
-            ['state' => False, 'name' => 'Programming']
+            ['state' => FALSE, 'name' => 'Eating'],
+            ['state' => FALSE, 'name' => 'Write an essay'],
+            ['state' => FALSE, 'name' => 'Programming']
         ];
     }
 
@@ -27,7 +29,7 @@ class todolist
 
     public function add_item($item_name){
         $_SESSION['list'][] = [
-            'state' => False,
+            'state' => FALSE,
             'name' => $item_name
         ];
     }
@@ -45,9 +47,9 @@ class todolist
         foreach ($_SESSION['list'] as $i => $item){
             if($item['name'] === $item_name){
                 if($item['state']){
-                    $_SESSION['list'][$i]['state'] = False;
+                    $_SESSION['list'][$i]['state'] = FALSE;
                 } else {
-                    $_SESSION['list'][$i]['state'] = True;
+                    $_SESSION['list'][$i]['state'] = TRUE;
                 }
                 return;
             }
@@ -65,7 +67,7 @@ class todolist
 
     public function false_all_items(){
         foreach($_SESSION['list'] as $i =>$item){
-            $_SESSION['list']['i']['state'] = False;
+            $_SESSION['list']['i']['state'] = FALSE;
         }
     }
 
