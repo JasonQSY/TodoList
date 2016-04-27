@@ -15,14 +15,19 @@ I reccommend that open <http://localhost:8080/index.php> with Google Chrome.
 ## Structure
 
 - index.php
-    - It is mainly a html file to display contents.
+    - It is mainly a html file to display contents. If not log in, redirect to `login.php`
 - default.css
-    - The only css file for `index.php`
+    - The only css file.
 - process.php
     - When edit something one index.php, it will redirect to `process.php` to deal with the issue and return to `index.php` to display.
 - todolist.php
-    - A PHP class offering relatively low-level opeations on the todolist.
-
+    - A PHP class offering relatively low-level operations on the TodoList.
+- login.php
+    - The front-end of login. If having logged in, redirect to `index.php` directly. If register or login, redirect to `result.php`.
+- result.php
+    - If registering or logging in successfully, redirect to `index.php`.
+- logout.php
+    - Unset session and redirect to `login.php`
 
 ## Demo
 
