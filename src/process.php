@@ -29,5 +29,5 @@ if(isset($_POST['itemname'])){
         $TodoList->edit_name($ori_name, $new_name);
     }
 }
-
+$TodoList->save_list();
 header("Location: index.php");

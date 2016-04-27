@@ -2,6 +2,10 @@
     require 'TodoList.php';
     $TodoList = new TodoList();
     $list = $TodoList->get_list();
+
+    if( empty($_SESSION['username']) ){
+        header('Location: login.php');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +18,12 @@
 <h1>TODO List</h1>
 <div id="author">
     This is a TODO list created by <a href="https://github.com/JasonQSY">JasonQSY</a>.
+</div>
+<div id="user">
+    <p>
+        Hello, <?= $_SESSION['username'] ?>
+        <a href="logout.php">Log Out</a>
+    </p>
 </div>
 <div id="list">
     <form method="POST" action="process.php">
