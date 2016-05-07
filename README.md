@@ -1,8 +1,11 @@
 # TodoList
 
-This is a web todolist and dyweb php assignment.
+This is a web todolist and dyweb php assignment of [Restful API](http://dyweb.github.io/course/web/2016_Spring/html-rest/index.html).
+
+Meanwhile, the front-end is based on the previous version in branch `php-assignment`.
 
 ![snapshot](./snap.png)
+
 ## Usage
 
 With php, set up a localhost or a server. A easy way to set up a localhost is
@@ -29,6 +32,3 @@ I reccommend that open <http://localhost:8080/index.php> with Google Chrome.
 - logout.php
     - Unset session and redirect to `login.php`
 
-## Demo
-
-It is a shame that the configuration on my hired server has some slight problems. Instead there is a snapshot above.
