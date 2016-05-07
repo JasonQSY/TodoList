@@ -1,6 +1,6 @@
 # TodoList
 
-This is a web todolist and dyweb php assignment of php.
+This is a web todolist and dyweb php assignment of [Instant PHP](http://dyweb.github.io/course/web/2016_Spring/instant-php/index.html).
 
 ![snapshot](./snap.png)
 ## Usage
