@@ -1,6 +1,6 @@
 # TodoList
 
-This is a web todolist and dyweb php assignment.
+This is a web todolist and dyweb php assignment of php.
 
 ![snapshot](./snap.png)
 ## Usage
