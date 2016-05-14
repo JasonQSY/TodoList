@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
     <title>TODO List</title>
-    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="stylesheet" type="text/css" href="../public/default.css">
 </head>
 <body>
 <h1>TODO List</h1>

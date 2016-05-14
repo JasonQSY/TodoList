@@ -15,10 +15,11 @@ class TodoList
     public function __construct()
     {
         session_start();
-        $username = $_SESSION['username'];
-        if( !file_exists('../data/'.$username.'.csv')){
-            header("Location: login.php");
-        }
+        //$username = $_SESSION['username'];
+        //if( !file_exists('../data/'.$username.'.csv')){
+        //    header("Location: login.php");
+        //}
+        $username = 'jason';
         $info = file_get_contents('../data/'.$username.'.csv');
         $lines = explode(PHP_EOL, $info);
         foreach ($lines as $i => $line){

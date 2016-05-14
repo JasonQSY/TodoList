@@ -14,7 +14,7 @@ if( !empty($_SESSION['username']) ){
 <html>
 <head>
     <title>Log in - TodoList</title>
-    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="stylesheet" type="text/css" href="../public/default.css">
 </head>
 <body>
     <h1>TODO List</h1>

@@ -47,6 +47,7 @@ $app->put('/api/v1/tasks/{id}', function(Request $request, Response $response) u
     $put = $request->getParsedBody();
     $data = [];
     $data['name'] = $put['name'];
+    $data['state'] = $put['state'];
     
     $id = intval($request->getAttribute('id'));
     
