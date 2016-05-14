@@ -36,6 +36,7 @@ $app->post('/api/v1/tasks', function(Request $request, Response $response) use($
     $data['name'] = filter_var($post['name'], FILTER_SANITIZE_STRING);
     if (!empty($data['name'])) {
         $TodoList->add_item($data['name']);
+        $TodoList->save_list();
         $response->getBody()->write("Success");
     } else {
         $response->getBody()->write("Fail");
@@ -50,28 +51,24 @@ $app->put('/api/v1/tasks/{id}', function(Request $request, Response $response) u
     $data['state'] = $put['state'];
     
     $id = intval($request->getAttribute('id'));
-    
-    if (!empty($data['name'])) {
-        /**
-         * @todo
-         * 
-         * The class does not have such method.
-         */
-        $response->getBody()->write("Success");
-    } else {
-        $response->getBody()->write("Fail");
+
+    if (!empty($data['state'])) {
+        $TodoList->update_state_by_id($id, $data['state']);
     }
+
+    if (!empty($data['name'])) {
+        $TodoList->update_name_by_id($id, $data['name']);
+    }
+    $TodoList->save_list();
+    $response->getBody()->write('Success');
     return $response;
 });
 
 $app->delete('/api/v1/tasks/{id}', function(Request $request, Response $response) {
     $id = intval($request->getAttribute('id'));
     if (!empty($id)) {
-        /**
-         * @todo
-         * 
-         * The class does not have such method.
-         */
+        $TodoList->remove_item_by_id($id);
+        $Todolist->save_list();
         $response->getBody()->write('Success');
     } else {
         $response->getBody()->write('Fail');

@@ -118,4 +118,19 @@ class TodoList
             }
         }
     }
+    
+    public function update_name_by_id($id, $name)
+    {
+        $this->list[$id]['name'] = $name;
+    }
+    
+    public function update_state_by_id($id, $state)
+    {
+        $this->list[$id]['state'] = $state;
+    }
+    
+    public function remove_item_by_id($id)
+    {
+        unset($this->list[$id]);
+    }
 }
